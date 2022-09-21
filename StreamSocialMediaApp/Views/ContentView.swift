@@ -5,37 +5,8 @@ import StreamChatSwiftUI
 struct Post: Identifiable {
     let id: Int
     let userName, text, profileImageName, imageName: String
-}
-
-struct PostView: View {
-    @State private var selectedTab = 1
-    let post: Post
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack(spacing: 8) {
-                Image(post.profileImageName)
-                    .resizable()
-                    .clipShape(Circle())
-                    .frame(width: 50, height: 50)
-                
-                Text(post.userName).font(.headline)
-            }
-            .padding(EdgeInsets(top: 8, leading: 16, bottom: 0, trailing: 0))
-            
-            Image(post.imageName)
-                .resizable()
-                .scaledToFill()
-//                .frame(width: 350, height: 250)
-                .clipped()
-            
-            Text(post.text)
-                .lineLimit(nil)
-                .font(.system(size: 15))
-                .padding(.leading, 16).padding(.trailing, 16).padding(.bottom, 16)
-        }
-        .listRowInsets(EdgeInsets())
-    }
+    let likes: Int
+    let timePosted: String
 }
 
 struct Story {
@@ -91,37 +62,37 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-                List {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        StoryView(stories: stories)
-                    }
-                    .frame(height: 76)
-                    .clipped()
-                    
-                    ForEach(posts) {(post) in
-                        PostView(post: post)
-                    }
+            List {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    StoryView(stories: stories)
                 }
-                .listStyle(.plain)
-                .navigationBarTitle(Text("InstaStream"), displayMode: .inline)
-                .navigationBarItems(leading: Button(action: {
-                    print("click camera...")
-                }, label: {
-                    Image(systemName: "camera")
-                        .renderingMode(.original)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 32, height: 32)
-                }), trailing: NavigationLink {
-                    ChatChannelListView(viewFactory: SocialViewFactory.shared, viewModel: viewModel)
-                        .environmentObject(viewModel)
-                } label: {
-                    Image(systemName: "paperplane")
-                        .renderingMode(.original)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 29, height: 29)
-                })
+                .frame(height: 76)
+                .clipped()
+                
+                ForEach(posts) { post in
+                    PostView(post: post)
+                }
+            }
+            .listStyle(.plain)
+            .navigationBarTitle(Text("InstaStream"), displayMode: .inline)
+            .navigationBarItems(leading: Button(action: {
+                print("click camera...")
+            }, label: {
+                Image(systemName: "camera")
+                    .renderingMode(.original)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 32, height: 32)
+            }), trailing: NavigationLink {
+                ChatChannelListView(viewFactory: SocialViewFactory.shared, viewModel: viewModel)
+                    .environmentObject(viewModel)
+            } label: {
+                Image(systemName: "paperplane")
+                    .renderingMode(.original)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 29, height: 29)
+            })
             
         }
     }

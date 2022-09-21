@@ -33,6 +33,7 @@
 		AC4C092A28DA1A140061E959 /* CreateInstaAttachmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C092928DA1A140061E959 /* CreateInstaAttachmentView.swift */; };
 		AC4C092C28DA1BDF0061E959 /* MyAttachmentSourcePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C092B28DA1BDF0061E959 /* MyAttachmentSourcePickerView.swift */; };
 		AC4C092E28DA1FF60061E959 /* LeadingComposerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C092D28DA1FF60061E959 /* LeadingComposerView.swift */; };
+		ACD3416F28DB67070097472E /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3416E28DB67070097472E /* PostView.swift */; };
 		ACFA023628DB51CB00E363DE /* MyChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA023528DB51CB00E363DE /* MyChannelListViewModel.swift */; };
 		ACFA023828DB537200E363DE /* CustomMessageResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA023728DB537200E363DE /* CustomMessageResolver.swift */; };
 		ACFA023B28DB570E00E363DE /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA023A28DB570E00E363DE /* Data.swift */; };
@@ -84,6 +85,7 @@
 		AC4C092928DA1A140061E959 /* CreateInstaAttachmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInstaAttachmentView.swift; sourceTree = "<group>"; };
 		AC4C092B28DA1BDF0061E959 /* MyAttachmentSourcePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAttachmentSourcePickerView.swift; sourceTree = "<group>"; };
 		AC4C092D28DA1FF60061E959 /* LeadingComposerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingComposerView.swift; sourceTree = "<group>"; };
+		ACD3416E28DB67070097472E /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		ACFA023528DB51CB00E363DE /* MyChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChannelListViewModel.swift; sourceTree = "<group>"; };
 		ACFA023728DB537200E363DE /* CustomMessageResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageResolver.swift; sourceTree = "<group>"; };
 		ACFA023A28DB570E00E363DE /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				5F03D4722891DD7B007F8C9D /* ContentView.swift */,
 				5F03D49D28920064007F8C9D /* ChatView.swift */,
 				5F20BA0F28D248E30003A4CC /* FeedView.swift */,
+				ACD3416E28DB67070097472E /* PostView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				ACFA023628DB51CB00E363DE /* MyChannelListViewModel.swift in Sources */,
 				AC4C092E28DA1FF60061E959 /* LeadingComposerView.swift in Sources */,
 				5FB0056A28B669A500881252 /* CreateGroupViewModel.swift in Sources */,
+				ACD3416F28DB67070097472E /* PostView.swift in Sources */,
 				5F930AF128DA0BE4003C5CE1 /* InstaAttachmentView.swift in Sources */,
 				5F03D4A5289211D3007F8C9D /* SocialViewFactory.swift in Sources */,
 				5F03D4A7289213AB007F8C9D /* SocialChannelListHeader.swift in Sources */,

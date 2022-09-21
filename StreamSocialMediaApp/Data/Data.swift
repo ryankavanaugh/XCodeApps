@@ -8,10 +8,10 @@
 import Foundation
 
 let posts: [Post] = [
-    Post(id: 0, userName: "Talia", text: "New fit, don't mind me", profileImageName: "sprofile6", imageName: "girlprofile1"),
-    Post(id: 1, userName: "Jacques", text: "Friday shoot. Big moood 🌙 \n", profileImageName: "sprofile4", imageName: "fashiongirl3"),
-    Post(id: 2, userName: "Suzzy", text: "I love winter and hiking with Douglas 😍 Winter vibes! Big slay! \n", profileImageName: "sprofile1", imageName: "fashiongirl5"),
-    Post(id: 3, userName: "Jamie", text: "Sunday Funday", profileImageName: "profile5", imageName: "girls1"),
+    Post(id: 0, userName: "Talia", text: "New fit, don't mind me", profileImageName: "sprofile6", imageName: "girlprofile1", likes: 301, timePosted: "7:34 PM"),
+    Post(id: 1, userName: "Jacques", text: "Friday shoot. Big moood 🌙", profileImageName: "sprofile4", imageName: "fashiongirl3", likes: 363, timePosted: "5:43 PM"),
+    Post(id: 2, userName: "Suzzy", text: "I love winter and hiking with Douglas 😍 Winter vibes! Big slay!", profileImageName: "sprofile1", imageName: "fashiongirl5", likes: 123, timePosted: "3:33 PM"),
+    Post(id: 3, userName: "Jamie", text: "Sunday Funday", profileImageName: "profile5", imageName: "girls1", likes: 98, timePosted: "1:20 PM"),
 ]
 
 let stories: [Story] = [
