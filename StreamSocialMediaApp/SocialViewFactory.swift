@@ -15,6 +15,10 @@ class SocialViewFactory: ViewFactory {
         SocialChannelModifier(title: "InstaStream Messages", currentUserController: chatClient.currentUserController())
     }
     
+    func makeCustomAttachmentViewType(for message: ChatMessage, isFirst: Bool, availableWidth: CGFloat, scrolledId: Binding<String?>) -> some View {
+        InstaAttachmentView()
+    }
+    
     func makeLeadingComposerView(state: Binding<PickerTypeState>, channelConfig: ChannelConfig?) -> some View {
         LeadingComposerView(pickerTypeState: state, channelConfig: channelConfig)
     }

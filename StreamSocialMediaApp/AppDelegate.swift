@@ -19,7 +19,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions:
                         [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         // The `StreamChat` instance we need to assign
-        streamChat = StreamChat(chatClient: chatClient)
+        let messageTypeResolver = CustomMessageResolver()
+        let utils = Utils(messageTypeResolver: messageTypeResolver)
+        streamChat = StreamChat(chatClient: chatClient, utils: utils)
 
         // Calling the `connectUser` functions
         connectUser()

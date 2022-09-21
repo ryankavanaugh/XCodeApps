@@ -49,12 +49,6 @@ struct LeadingComposerView: View {
                         .frame(height: 18)
                         .foregroundColor(Color(colors.textLowEmphasis))
                 }
-                
-                PickerTypeButton(
-                    pickerTypeState: $pickerTypeState,
-                    pickerType: .custom,
-                    selected: attachmentPickerType
-                )
                 .accessibilityIdentifier("PickerTypeInstaAttachment")
                 
             case .collapsed:

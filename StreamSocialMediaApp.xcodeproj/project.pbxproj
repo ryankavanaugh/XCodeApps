@@ -34,6 +34,7 @@
 		AC4C092C28DA1BDF0061E959 /* MyAttachmentSourcePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C092B28DA1BDF0061E959 /* MyAttachmentSourcePickerView.swift */; };
 		AC4C092E28DA1FF60061E959 /* LeadingComposerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C092D28DA1FF60061E959 /* LeadingComposerView.swift */; };
 		ACFA023628DB51CB00E363DE /* MyChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA023528DB51CB00E363DE /* MyChannelListViewModel.swift */; };
+		ACFA023828DB537200E363DE /* CustomMessageResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA023728DB537200E363DE /* CustomMessageResolver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		AC4C092B28DA1BDF0061E959 /* MyAttachmentSourcePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAttachmentSourcePickerView.swift; sourceTree = "<group>"; };
 		AC4C092D28DA1FF60061E959 /* LeadingComposerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingComposerView.swift; sourceTree = "<group>"; };
 		ACFA023528DB51CB00E363DE /* MyChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChannelListViewModel.swift; sourceTree = "<group>"; };
+		ACFA023728DB537200E363DE /* CustomMessageResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageResolver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 		5F03D49A28920016007F8C9D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ACFA023728DB537200E363DE /* CustomMessageResolver.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				5F20BA1028D248E30003A4CC /* FeedView.swift in Sources */,
 				5F03D49E28920064007F8C9D /* ChatView.swift in Sources */,
 				AC4C092A28DA1A140061E959 /* CreateInstaAttachmentView.swift in Sources */,
+				ACFA023828DB537200E363DE /* CustomMessageResolver.swift in Sources */,
 				AC4C092828DA198B0061E959 /* InstaAttachmentPayload.swift in Sources */,
 				5FB0056D28B669B200881252 /* CustomChannelHeader.swift in Sources */,
 				5FB0056F28B669BC00881252 /* GroupNameView.swift in Sources */,
