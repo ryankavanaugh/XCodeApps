@@ -15,7 +15,7 @@ struct PostView: View {
     let post: Post
     
     var body: some View {
-        VStack(spacing: 10) {
+        VStack(spacing: 5) {
             HStack(spacing: 8) {
                 Image(post.profileImageName)
                     .resizable()
@@ -33,7 +33,7 @@ struct PostView: View {
                     Image(systemName: "ellipsis")
                         .frame(width: 34, height: 34)
                         .foregroundColor(.black)
-                        .background(Color.gray.opacity(0.3))
+//                        .background(Color.gray.opacity(0.09))
                         .clipShape(Circle())
                         .scaledToFit()
                         .rotationEffect(.degrees(90))
@@ -49,36 +49,42 @@ struct PostView: View {
             
             HStack {
                 Button {
-                    // Nothing to do
+                    // Like
                 } label: {
                     Image(systemName: "heart")
-                        .frame(width: 34, height: 34)
-                        .foregroundColor(.black)
-                        .background(Color.gray.opacity(0.3))
-                        .clipShape(Circle())
+                        .resizable()
+                        .frame(width: 25, height: 25)
                         .scaledToFit()
+                        .padding(7)
+                        .foregroundColor(.black)
+//                        .background(Color.gray.opacity(0.09))
+//                        .clipShape(Circle())
+                    
+                     
                 }
                 
                 Button {
-                    // Nothing to do
+                    // Message
                 } label: {
                     Image(systemName: "paperplane")
-                        .frame(width: 34, height: 34)
-                        .foregroundColor(.black)
-                    
-                        .background(Color.gray.opacity(0.3))
-                        .clipShape(Circle())
+                        .resizable()
+                        .frame(width: 27, height: 27)
                         .scaledToFit()
+                        .padding(8)
+                        .foregroundColor(.black)
+//                        .background(Color.gray.opacity(0.09))
+//                        .clipShape(Circle())
                 }
 
                 Spacer()
                 
                 Text("\(post.likes) likes")
                     .bold()
+//                    .font(.caption)
             }
             .padding(.horizontal)
             
-            HStack(alignment: .top, spacing: 20) {
+            HStack(alignment: .top, spacing: 9) {
                 Text(post.userName)
                     .foregroundColor(.primary)
                     .fontWeight(.bold)
@@ -96,20 +102,27 @@ struct PostView: View {
                     // Nothing to do
                 } label: {
                     Text("View All Comments")
-                        .foregroundColor(.primary)
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 6)
-                        .background(Color.gray.opacity(0.3))
+                        .foregroundColor(Color.gray.opacity(0.99))
+                        .padding(.horizontal, 9)
+                        .padding(.vertical, 5)
+                        .background(Color.gray.opacity(0.07))
                         .clipShape(Capsule())
                 }
                 
                 Spacer()
                 
+                
+                
+            }
+            .padding(.horizontal)
+            
+            HStack {
+                Spacer()
                 Text(post.timePosted)
                     .font(.footnote)
                     .foregroundColor(.secondary)
-            }
-            .padding(.horizontal)
+                
+            }.padding(.horizontal)
         }
         .padding(.bottom)
         .listRowInsets(EdgeInsets())

@@ -42,24 +42,6 @@ struct StoryView: View {
 struct ContentView: View {
     
     @StateObject var viewModel = MyChannelListViewModel()
-    
-    //    var body: some View{
-    //        TabView(selection: $selectedTab) {
-    //            HomeView()
-    //                .tabItem {
-    //                    Label("Home", systemImage: "house.fill")
-    //                }
-    //                .tag(1)
-    //
-    //            FeedView()
-    //                .tabItem {
-    //                    Label("Events", systemImage: "calendar")
-    //                }
-    //                .tag(2)
-    //        }
-    //    }
-    
-    
     var body: some View {
         NavigationView {
             List {
@@ -71,6 +53,7 @@ struct ContentView: View {
                 
                 ForEach(posts) { post in
                     PostView(post: post)
+                        .buttonStyle(.plain)
                 }
             }
             .listStyle(.plain)
@@ -83,8 +66,10 @@ struct ContentView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 32, height: 32)
+                    .padding(15)
             }), trailing: NavigationLink {
                 ChatChannelListView(viewFactory: SocialViewFactory.shared, viewModel: viewModel)
+//                ChatChannelListContentView(viewFactory: SocialViewFactory.shared, viewModel: viewModel)
                     .environmentObject(viewModel)
             } label: {
                 Image(systemName: "paperplane")
@@ -92,6 +77,7 @@ struct ContentView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 29, height: 29)
+                    .padding(15)
             })
             
         }

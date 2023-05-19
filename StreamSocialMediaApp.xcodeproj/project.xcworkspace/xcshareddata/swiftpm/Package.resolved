@@ -10,30 +10,12 @@
       }
     },
     {
-      "identity" : "gifu",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kaishin/Gifu",
-      "state" : {
-        "revision" : "51f2eab32903e336f590c013267cfa4d7f8b06c4",
-        "version" : "3.3.1"
-      }
-    },
-    {
       "identity" : "nuke",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kean/Nuke.git",
       "state" : {
-        "revision" : "a002b7fd786f2df2ed4333fe73a9727499fd9d97",
-        "version" : "10.11.2"
-      }
-    },
-    {
-      "identity" : "nukeui",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kean/NukeUI.git",
-      "state" : {
-        "revision" : "db55022a8e483774ebbf3568727071477546d9ea",
-        "version" : "0.8.3"
+        "revision" : "93c8dc78fbc0aa3538a0db460eb389d4180af242",
+        "version" : "11.3.1"
       }
     },
     {
@@ -41,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/GetStream/stream-chat-swift.git",
       "state" : {
-        "revision" : "65d964911f38a4cae4bd4d8cc80f5e8095b0c057",
-        "version" : "4.21.1"
+        "revision" : "7efe79171c24c8eb312401f87c453c15f77fbba9",
+        "version" : "4.31.0"
       }
     },
     {
@@ -50,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/GetStream/stream-chat-swift-test-helpers.git",
       "state" : {
-        "revision" : "9b6ddec7326b8dcbc4f226a64c25b349f1800401",
-        "version" : "0.2.3"
+        "revision" : "237da98e4946ed8e2dac51d9e82e713b0d47a298",
+        "version" : "0.2.5"
       }
     },
     {
@@ -59,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/GetStream/stream-chat-swiftui",
       "state" : {
-        "revision" : "29ec1ab553eec13121e80bfc82dac645b5dc3317",
-        "version" : "4.21.0"
+        "revision" : "e56f1d232234e313b58c1612bdee08f7acaa3480",
+        "version" : "4.31.0"
       }
     },
     {
