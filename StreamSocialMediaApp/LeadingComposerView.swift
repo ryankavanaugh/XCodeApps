@@ -11,7 +11,7 @@ import StreamChatSwiftUI
 
 struct LeadingComposerView: View {
     
-    @EnvironmentObject() var viewModel: MyChannelListViewModel
+//    @EnvironmentObject() var viewModel: MyChannelListViewModel
     
     @Injected(\.images) var images
     @Injected(\.colors) var colors
@@ -40,17 +40,22 @@ struct LeadingComposerView: View {
                 )
                 .accessibilityIdentifier("PickerTypeButtonCommands")
                 
-                Button {
-                    viewModel.sendCustomAttachmentMessage()
-                } label: {
-                    Image(systemName: "camera.aperture")
-                        .renderingMode(.template)
-                        .aspectRatio(contentMode: .fill)
-                        .frame(height: 18)
-                        .foregroundColor(Color(colors.textLowEmphasis))
-                }
-                .accessibilityIdentifier("PickerTypeInstaAttachment")
+//                Button {
+//                    viewModel.sendCustomAttachmentMessage()
+//                } label: {
+//                    Image(systemName: "camera.aperture")
+//                        .renderingMode(.template)
+//                        .aspectRatio(contentMode: .fill)
+//                        .frame(height: 18)
+//                        .foregroundColor(Color(colors.textLowEmphasis))
+//                }
+//                .accessibilityIdentifier("PickerTypeInstaAttachment")
                 
+                PickerTypeButton(
+                    pickerTypeState: $pickerTypeState,
+                    pickerType: .custom,
+                    selected: attachmentPickerType
+                )
             case .collapsed:
                 Button {
                     withAnimation {
@@ -97,7 +102,7 @@ struct PickerTypeButton: View {
         if pickerType == .media {
             return images.openAttachments
         } else if pickerType == .custom {
-            return UIImage(systemName: "camera.aperture")!
+            return UIImage(systemName: "plus.circle")!
         } else {
             return images.commands
         }

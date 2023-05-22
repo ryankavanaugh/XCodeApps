@@ -29,12 +29,20 @@
 		5FB0056F28B669BC00881252 /* GroupNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0056E28B669BC00881252 /* GroupNameView.swift */; };
 		5FB0057128B669C500881252 /* NewChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0057028B669C500881252 /* NewChatView.swift */; };
 		5FB0057328B669CB00881252 /* NewChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0057228B669CB00881252 /* NewChatViewModel.swift */; };
+		AC3EE4062A1B9195008B6CA0 /* PaymentAttachmentPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3EE4052A1B9195008B6CA0 /* PaymentAttachmentPreview.swift */; };
+		AC3EE4082A1B9748008B6CA0 /* PaymentAttachmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3EE4072A1B9748008B6CA0 /* PaymentAttachmentView.swift */; };
+		AC3EE40A2A1BAD97008B6CA0 /* LinearGradient+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3EE4092A1BAD97008B6CA0 /* LinearGradient+Constants.swift */; };
 		AC4C092828DA198B0061E959 /* InstaAttachmentPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C092728DA198B0061E959 /* InstaAttachmentPayload.swift */; };
 		AC4C092A28DA1A140061E959 /* CreateInstaAttachmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C092928DA1A140061E959 /* CreateInstaAttachmentView.swift */; };
 		AC4C092C28DA1BDF0061E959 /* MyAttachmentSourcePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C092B28DA1BDF0061E959 /* MyAttachmentSourcePickerView.swift */; };
 		AC4C092E28DA1FF60061E959 /* LeadingComposerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C092D28DA1FF60061E959 /* LeadingComposerView.swift */; };
 		ACD3416F28DB67070097472E /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3416E28DB67070097472E /* PostView.swift */; };
-		ACFA023628DB51CB00E363DE /* MyChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA023528DB51CB00E363DE /* MyChannelListViewModel.swift */; };
+		ACDFC5532A17C8E400FF21E8 /* PaymentAttachmentPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFC5522A17C8E400FF21E8 /* PaymentAttachmentPayload.swift */; };
+		ACDFC5552A17C9D700FF21E8 /* AttachmentType+CustomPayloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFC5542A17C9D700FF21E8 /* AttachmentType+CustomPayloads.swift */; };
+		ACDFC5572A17CAF000FF21E8 /* SelectedCustomAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFC5562A17CAF000FF21E8 /* SelectedCustomAttachment.swift */; };
+		ACDFC55A2A17CB1A00FF21E8 /* AttachmentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFC5592A17CB1A00FF21E8 /* AttachmentsViewModel.swift */; };
+		ACDFC55D2A17CB9700FF21E8 /* CustomAttachmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFC55C2A17CB9700FF21E8 /* CustomAttachmentView.swift */; };
+		ACDFC5602A17CBFB00FF21E8 /* PaymentAttachmentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFC55F2A17CBFB00FF21E8 /* PaymentAttachmentPickerView.swift */; };
 		ACFA023828DB537200E363DE /* CustomMessageResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA023728DB537200E363DE /* CustomMessageResolver.swift */; };
 		ACFA023B28DB570E00E363DE /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFA023A28DB570E00E363DE /* Data.swift */; };
 /* End PBXBuildFile section */
@@ -81,12 +89,20 @@
 		5FB0056E28B669BC00881252 /* GroupNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupNameView.swift; sourceTree = "<group>"; };
 		5FB0057028B669C500881252 /* NewChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChatView.swift; sourceTree = "<group>"; };
 		5FB0057228B669CB00881252 /* NewChatViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChatViewModel.swift; sourceTree = "<group>"; };
+		AC3EE4052A1B9195008B6CA0 /* PaymentAttachmentPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAttachmentPreview.swift; sourceTree = "<group>"; };
+		AC3EE4072A1B9748008B6CA0 /* PaymentAttachmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAttachmentView.swift; sourceTree = "<group>"; };
+		AC3EE4092A1BAD97008B6CA0 /* LinearGradient+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinearGradient+Constants.swift"; sourceTree = "<group>"; };
 		AC4C092728DA198B0061E959 /* InstaAttachmentPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaAttachmentPayload.swift; sourceTree = "<group>"; };
 		AC4C092928DA1A140061E959 /* CreateInstaAttachmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInstaAttachmentView.swift; sourceTree = "<group>"; };
 		AC4C092B28DA1BDF0061E959 /* MyAttachmentSourcePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAttachmentSourcePickerView.swift; sourceTree = "<group>"; };
 		AC4C092D28DA1FF60061E959 /* LeadingComposerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingComposerView.swift; sourceTree = "<group>"; };
 		ACD3416E28DB67070097472E /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
-		ACFA023528DB51CB00E363DE /* MyChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChannelListViewModel.swift; sourceTree = "<group>"; };
+		ACDFC5522A17C8E400FF21E8 /* PaymentAttachmentPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAttachmentPayload.swift; sourceTree = "<group>"; };
+		ACDFC5542A17C9D700FF21E8 /* AttachmentType+CustomPayloads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttachmentType+CustomPayloads.swift"; sourceTree = "<group>"; };
+		ACDFC5562A17CAF000FF21E8 /* SelectedCustomAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCustomAttachment.swift; sourceTree = "<group>"; };
+		ACDFC5592A17CB1A00FF21E8 /* AttachmentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentsViewModel.swift; sourceTree = "<group>"; };
+		ACDFC55C2A17CB9700FF21E8 /* CustomAttachmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAttachmentView.swift; sourceTree = "<group>"; };
+		ACDFC55F2A17CBFB00FF21E8 /* PaymentAttachmentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAttachmentPickerView.swift; sourceTree = "<group>"; };
 		ACFA023728DB537200E363DE /* CustomMessageResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageResolver.swift; sourceTree = "<group>"; };
 		ACFA023A28DB570E00E363DE /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,8 +156,8 @@
 		5F03D46F2891DD7B007F8C9D /* StreamSocialMediaApp */ = {
 			isa = PBXGroup;
 			children = (
+				ACDFC5502A17C8C700FF21E8 /* Stream */,
 				ACFA023928DB56FF00E363DE /* Data */,
-				ACFA023428DB51BB00E363DE /* ViewModels */,
 				5FB0056728B6696F00881252 /* DemoAppFiles */,
 				5F03D4A228920BE4007F8C9D /* AppDelegate.swift */,
 				5F03D4A4289211D3007F8C9D /* SocialViewFactory.swift */,
@@ -185,7 +201,6 @@
 		5F03D49A28920016007F8C9D /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				ACFA023728DB537200E363DE /* CustomMessageResolver.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -199,6 +214,7 @@
 				5F03D49D28920064007F8C9D /* ChatView.swift */,
 				5F20BA0F28D248E30003A4CC /* FeedView.swift */,
 				ACD3416E28DB67070097472E /* PostView.swift */,
+				AC3EE4092A1BAD97008B6CA0 /* LinearGradient+Constants.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				5F930AF028DA0BE4003C5CE1 /* InstaAttachmentView.swift */,
-				AC4C092728DA198B0061E959 /* InstaAttachmentPayload.swift */,
 				AC4C092928DA1A140061E959 /* CreateInstaAttachmentView.swift */,
 				AC4C092B28DA1BDF0061E959 /* MyAttachmentSourcePickerView.swift */,
 			);
@@ -235,12 +250,45 @@
 			path = DemoAppFiles;
 			sourceTree = "<group>";
 		};
-		ACFA023428DB51BB00E363DE /* ViewModels */ = {
+		ACDFC5502A17C8C700FF21E8 /* Stream */ = {
 			isa = PBXGroup;
 			children = (
-				ACFA023528DB51CB00E363DE /* MyChannelListViewModel.swift */,
+				ACDFC55B2A17CB8C00FF21E8 /* View */,
+				ACDFC5582A17CB1000FF21E8 /* ViewModel */,
+				ACFA023728DB537200E363DE /* CustomMessageResolver.swift */,
+				ACDFC5512A17C8D300FF21E8 /* AttachmentPayloads */,
+				ACDFC5562A17CAF000FF21E8 /* SelectedCustomAttachment.swift */,
 			);
-			path = ViewModels;
+			path = Stream;
+			sourceTree = "<group>";
+		};
+		ACDFC5512A17C8D300FF21E8 /* AttachmentPayloads */ = {
+			isa = PBXGroup;
+			children = (
+				ACDFC5542A17C9D700FF21E8 /* AttachmentType+CustomPayloads.swift */,
+				ACDFC5522A17C8E400FF21E8 /* PaymentAttachmentPayload.swift */,
+				AC4C092728DA198B0061E959 /* InstaAttachmentPayload.swift */,
+			);
+			path = AttachmentPayloads;
+			sourceTree = "<group>";
+		};
+		ACDFC5582A17CB1000FF21E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACDFC5592A17CB1A00FF21E8 /* AttachmentsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ACDFC55B2A17CB8C00FF21E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACDFC55C2A17CB9700FF21E8 /* CustomAttachmentView.swift */,
+				AC3EE4052A1B9195008B6CA0 /* PaymentAttachmentPreview.swift */,
+				AC3EE4072A1B9748008B6CA0 /* PaymentAttachmentView.swift */,
+				ACDFC55F2A17CBFB00FF21E8 /* PaymentAttachmentPickerView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		ACFA023928DB56FF00E363DE /* Data */ = {
@@ -390,11 +438,12 @@
 				5F03D4A328920BE4007F8C9D /* AppDelegate.swift in Sources */,
 				5F20BA0E28D248860003A4CC /* HomeView.swift in Sources */,
 				AC4C092C28DA1BDF0061E959 /* MyAttachmentSourcePickerView.swift in Sources */,
+				AC3EE4062A1B9195008B6CA0 /* PaymentAttachmentPreview.swift in Sources */,
 				5FB0057128B669C500881252 /* NewChatView.swift in Sources */,
 				5FB0056B28B669A500881252 /* CreateGroupView.swift in Sources */,
 				5FB0057328B669CB00881252 /* NewChatViewModel.swift in Sources */,
 				5F03D4732891DD7B007F8C9D /* ContentView.swift in Sources */,
-				ACFA023628DB51CB00E363DE /* MyChannelListViewModel.swift in Sources */,
+				ACDFC5552A17C9D700FF21E8 /* AttachmentType+CustomPayloads.swift in Sources */,
 				AC4C092E28DA1FF60061E959 /* LeadingComposerView.swift in Sources */,
 				5FB0056A28B669A500881252 /* CreateGroupViewModel.swift in Sources */,
 				ACD3416F28DB67070097472E /* PostView.swift in Sources */,
@@ -402,14 +451,21 @@
 				5F03D4A5289211D3007F8C9D /* SocialViewFactory.swift in Sources */,
 				5F03D4A7289213AB007F8C9D /* SocialChannelListHeader.swift in Sources */,
 				ACFA023B28DB570E00E363DE /* Data.swift in Sources */,
+				ACDFC5572A17CAF000FF21E8 /* SelectedCustomAttachment.swift in Sources */,
 				5F20BA1028D248E30003A4CC /* FeedView.swift in Sources */,
+				AC3EE40A2A1BAD97008B6CA0 /* LinearGradient+Constants.swift in Sources */,
 				5F03D49E28920064007F8C9D /* ChatView.swift in Sources */,
 				AC4C092A28DA1A140061E959 /* CreateInstaAttachmentView.swift in Sources */,
 				ACFA023828DB537200E363DE /* CustomMessageResolver.swift in Sources */,
+				ACDFC55A2A17CB1A00FF21E8 /* AttachmentsViewModel.swift in Sources */,
+				ACDFC5532A17C8E400FF21E8 /* PaymentAttachmentPayload.swift in Sources */,
+				AC3EE4082A1B9748008B6CA0 /* PaymentAttachmentView.swift in Sources */,
 				AC4C092828DA198B0061E959 /* InstaAttachmentPayload.swift in Sources */,
 				5FB0056D28B669B200881252 /* CustomChannelHeader.swift in Sources */,
 				5FB0056F28B669BC00881252 /* GroupNameView.swift in Sources */,
+				ACDFC55D2A17CB9700FF21E8 /* CustomAttachmentView.swift in Sources */,
 				5F03D4A9289214BC007F8C9D /* SocialChannelListHeaderModifier.swift in Sources */,
+				ACDFC5602A17CBFB00FF21E8 /* PaymentAttachmentPickerView.swift in Sources */,
 				5F03D4712891DD7B007F8C9D /* StreamSocialMediaAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

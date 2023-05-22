@@ -12,6 +12,7 @@ struct NewChatView: View, KeyboardReadable {
     @Injected(\.colors) var colors
     
     @StateObject var viewModel = NewChatViewModel()
+    var viewFactory: SocialViewFactory
     
     @Binding var isNewChatShown: Bool
     
@@ -48,7 +49,7 @@ struct NewChatView: View, KeyboardReadable {
             .padding()
             
             if viewModel.state != .channel {
-                CreateGroupButton(isNewChatShown: $isNewChatShown)
+                CreateGroupButton(isNewChatShown: $isNewChatShown, viewFactory: viewFactory)
                 UsersHeaderView()
             }
             
@@ -89,7 +90,7 @@ struct NewChatView: View, KeyboardReadable {
             } else if viewModel.state == .channel, let controller = viewModel.channelController {
                 Divider()
                 ChatChannelView(
-                    viewFactory: SocialViewFactory.shared,
+                    viewFactory: viewFactory,
                     channelController: controller
                 )
             } else {
@@ -166,10 +167,11 @@ struct CreateGroupButton: View {
     @Injected(\.fonts) var fonts
     
     @Binding var isNewChatShown: Bool
+    var viewFactory: SocialViewFactory
     
     var body: some View {
         NavigationLink {
-            CreateGroupView(isNewChatShown: $isNewChatShown)
+            CreateGroupView(viewFactory: viewFactory, isNewChatShown: $isNewChatShown)
         } label: {
             HStack {
                 Image(systemName: "person.3")

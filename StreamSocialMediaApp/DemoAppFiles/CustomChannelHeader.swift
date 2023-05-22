@@ -41,8 +41,10 @@ public struct CustomChannelHeader: ToolbarContent {
             Button {
                 logoutAlertShown = true
             } label: {
-                LazyImage(source: currentUserController.currentUser?.imageURL)
-                    .onDisappear(.cancel)
+                Text("image")
+//                LazyImage(url: currentUserController.currentUser?.imageURL)
+//                LazyImage(imageURL: currentUserController.currentUser?.imageURL)
+//                    .onDisappear(.cancel)
                     .clipShape(Circle())
                     .frame(
                         width: 30,
@@ -58,6 +60,7 @@ struct CustomChannelModifier: ChannelListHeaderViewModifier {
     @Injected(\.chatClient) var chatClient
     
     var title: String
+    var viewFactory: SocialViewFactory
     
     @State var isNewChatShown = false
     @State var logoutAlertShown = false
@@ -74,7 +77,7 @@ struct CustomChannelModifier: ChannelListHeaderViewModifier {
             }
             
             NavigationLink(isActive: $isNewChatShown) {
-                NewChatView(isNewChatShown: $isNewChatShown)
+                NewChatView(viewFactory: viewFactory, isNewChatShown: $isNewChatShown)
             } label: {
                 EmptyView()
             }

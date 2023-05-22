@@ -11,6 +11,7 @@ struct GroupNameView: View, KeyboardReadable {
     @Injected(\.colors) var colors
     
     @StateObject var viewModel: CreateGroupViewModel
+    var viewFactory: SocialViewFactory
     
     @Binding var isNewChatShown: Bool
     
@@ -32,6 +33,7 @@ struct GroupNameView: View, KeyboardReadable {
                 
                 GroupControlsView(
                     viewModel: viewModel,
+                    viewFactory: viewFactory,
                     isNewChatShown: $isNewChatShown
                 )
             }
@@ -77,6 +79,7 @@ struct GroupControlsView: View {
     @Injected(\.colors) var colors
     
     @StateObject var viewModel: CreateGroupViewModel
+    var viewFactory: SocialViewFactory
     @Binding var isNewChatShown: Bool
     
     var body: some View {
@@ -105,7 +108,7 @@ struct GroupControlsView: View {
                 destination: {
                     if let controller = viewModel.channelController {
                         ChatChannelView(
-                            viewFactory: SocialViewFactory.shared,
+                            viewFactory: viewFactory,
                             channelController: controller
                         )
                         .onDisappear {

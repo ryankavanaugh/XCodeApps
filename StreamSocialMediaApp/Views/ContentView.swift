@@ -41,7 +41,8 @@ struct StoryView: View {
 
 struct ContentView: View {
     
-    @StateObject var viewModel = MyChannelListViewModel()
+    @StateObject var attachmentsViewModel = AttachmentsViewModel()
+    
     var body: some View {
         NavigationView {
             List {
@@ -68,9 +69,9 @@ struct ContentView: View {
                     .frame(width: 32, height: 32)
                     .padding(15)
             }), trailing: NavigationLink {
-                ChatChannelListView(viewFactory: SocialViewFactory.shared, viewModel: viewModel)
+                ChatChannelListView(viewFactory: SocialViewFactory(attachmentsViewModel: attachmentsViewModel), viewModel: attachmentsViewModel)
 //                ChatChannelListContentView(viewFactory: SocialViewFactory.shared, viewModel: viewModel)
-                    .environmentObject(viewModel)
+                    .environmentObject(attachmentsViewModel)
             } label: {
                 Image(systemName: "paperplane")
                     .renderingMode(.original)

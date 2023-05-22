@@ -51,6 +51,7 @@ struct SocialChannelModifier: ChannelListHeaderViewModifier {
     var title: String
     
     var currentUserController: CurrentChatUserController
+    var viewFactory: SocialViewFactory
     
     @State var isNewChatShown = false
     
@@ -62,7 +63,7 @@ struct SocialChannelModifier: ChannelListHeaderViewModifier {
             }
             
             NavigationLink(isActive: $isNewChatShown) {
-                NewChatView(isNewChatShown: $isNewChatShown)
+                NewChatView(viewFactory: viewFactory, isNewChatShown: $isNewChatShown)
             } label: {
                 EmptyView()
             }

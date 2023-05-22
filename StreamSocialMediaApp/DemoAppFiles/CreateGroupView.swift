@@ -12,6 +12,7 @@ struct CreateGroupView: View, KeyboardReadable {
     @Injected(\.colors) var colors
     
     @StateObject var viewModel = CreateGroupViewModel()
+    var viewFactory: SocialViewFactory
     
     @Binding var isNewChatShown: Bool
     
@@ -55,6 +56,7 @@ struct CreateGroupView: View, KeyboardReadable {
                 NavigationLink {
                     GroupNameView(
                         viewModel: viewModel,
+                        viewFactory: viewFactory,
                         isNewChatShown: $isNewChatShown
                     )
                 } label: {

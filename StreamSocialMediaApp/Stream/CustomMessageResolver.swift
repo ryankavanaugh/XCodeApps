@@ -11,7 +11,8 @@ import StreamChatSwiftUI
 
 class CustomMessageResolver: MessageTypeResolving {
     func hasCustomAttachment(message: ChatMessage) -> Bool {
-        let attachments = message.attachments(payloadType: InstaAttachmentPayload.self)
-        return attachments.count > 0
+        let instaAttachments = message.attachments(payloadType: InstaAttachmentPayload.self)
+        let paymentAttachments = message.attachments(payloadType: PaymentAttachmentPayload.self)
+        return instaAttachments.count > 0 || paymentAttachments.count > 0
     }
 }

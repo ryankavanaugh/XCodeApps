@@ -9,10 +9,6 @@ import Foundation
 import StreamChat
 import StreamChatSwiftUI
 
-extension AttachmentType {
-    static let insta = Self(rawValue: "insta")
-}
-
 struct InstaAttachmentPayload: AttachmentPayload {
     static let type: AttachmentType = .insta
 }
