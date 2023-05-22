@@ -19,67 +19,96 @@ struct PaymentAttachmentView: View {
     var messageId: MessageId
     
     @State private var processing = false
+    @State private var processingText = ""
     
     var title: String {
         switch paymentState {
         case .requested:
-            return "Payment requested"
+            return "Payment requested:"
         case .processing:
             return "Processing payment"
         case .done:
-            return "Payment done"
+            return "Payment done!"
         }
     }
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(title)
-                .font(.headline)
-            
-            HStack {
-                Spacer()
-                
-                Text("\(payload.amount) $")
-                    .font(.largeTitle)
-                    .bold()
-            }
-            
-            if paymentState == .requested {
+            if processing {
                 HStack {
                     Spacer()
                     
-                    Button {
-                        withAnimation {
-                            processing = true
-                        }
+                    ProgressView()
+                        .tint(.white)
+                    
+                    Spacer()
+                }
+                
+                Text(processingText)
+                    .font(.caption)
+                    .frame(maxWidth: .infinity)
+                    .padding(.top)
+            } else {
+                Text(title)
+                    .font(.headline)
+                    .opacity(0.8)
+                
+                Text("\(payload.amount)$")
+                    .font(.system(size: 40, weight: .black, design: .monospaced))
+                    .frame(maxWidth: .infinity, maxHeight: 40)
+                
+                if paymentState == .requested {
+                    HStack {
+                        Spacer()
                         
-//                        DispatchQueue.main.async
-                        viewModel.updatePaymentPaid(
-                            messageId: messageId,
-                            amount: payload.amount
-                        )
-                    } label: {
-                        Text("Pay")
+                        Button {
+                            withAnimation {
+                                processingText = "Requesting payment info ..."
+                                processing = true
+                            }
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                withAnimation {
+                                    processingText = "Finalizing payment ..."
+                                }
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                    viewModel.updatePaymentPaid(
+                                        messageId: messageId,
+                                        amount: payload.amount
+                                    )
+                                }
+                            }
+                            
+                        } label: {
+                            Text("Pay")
+                                .padding(.horizontal, 14)
+                                .padding(.vertical, 6)
+                                .background(
+                                    .ultraThinMaterial,
+                                    in: RoundedRectangle(cornerRadius: 8, style: .continuous)
+                                )
+                            
+                        }
                     }
-                    .buttonStyle(.borderedProminent)
-                }
-            }
-            
-            if paymentState == .done {
-                HStack {
-                    Spacer()
-                    
-                    Text("Payment done!")
-                        .foregroundColor(.secondary)
+                    .frame(height: 30)
                 }
                 
-                if let dateString = paymentDate {
-                    Text("Paid on: \(dateString)")
+                if paymentState == .done, let dateString = paymentDate {
+                    HStack {
+                        Spacer()
+                        
+                        Text("Paid: \(dateString)")
+                            .font(.footnote)
+                            .foregroundColor(.white)
+                            .opacity(0.6)
+                    }
                 }
             }
         }
+        .foregroundColor(.white)
         .padding()
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: .infinity, idealHeight: 160, maxHeight: 160)
         .background(
             LinearGradient.payment,
             in: RoundedRectangle(
@@ -87,6 +116,8 @@ struct PaymentAttachmentView: View {
                 style: .continuous
             )
         )
+        .padding()
+        .shadow(radius: 4)
     }
 }
 
@@ -98,6 +129,7 @@ struct PaymentAttachmentView_Previews: PreviewProvider {
             paymentState: .requested,
             messageId: .init()
         )
+        .frame(width: 250)
         
         PaymentAttachmentView(
             viewModel: AttachmentsViewModel(),
@@ -106,5 +138,6 @@ struct PaymentAttachmentView_Previews: PreviewProvider {
             paymentDate: Date().formatted(),
             messageId: .init()
         )
+        .frame(width: 250)
     }
 }

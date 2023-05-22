@@ -27,6 +27,7 @@ class SocialViewFactory: ViewFactory {
         // get possible attachments
         let paymentAttachments = message.attachments(payloadType: PaymentAttachmentPayload.self)
         let paymentState = PaymentState(rawValue: message.extraData["paymentState"]?.stringValue ?? "")
+        let paymentDate = message.extraData["paymentDate"]?.stringValue
 
         return VStack {
             ForEach(paymentAttachments.indices) { [weak self] index in
@@ -35,6 +36,7 @@ class SocialViewFactory: ViewFactory {
                         viewModel: viewModel,
                         payload: paymentAttachments[index].payload,
                         paymentState: paymentState,
+                        paymentDate: paymentDate,
                         messageId: message.id
                     )
                 }
