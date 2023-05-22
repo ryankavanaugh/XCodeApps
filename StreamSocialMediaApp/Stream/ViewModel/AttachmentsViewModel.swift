@@ -5,7 +5,7 @@
 //  Created by Stefan Blos on 19.05.23.
 //
 
-import Foundation
+import SwiftUI
 import StreamChat
 import StreamChatSwiftUI
 
@@ -14,6 +14,15 @@ class AttachmentsViewModel: ChatChannelListViewModel {
     @Injected(\.chatClient) var chatClient
     
     @Published var selectedCustomAttachment: SelectedCustomAttachment = .none
+    
+    var onPickerStateChange: ((AttachmentPickerState) -> Void)?
+    var closeAttachments: (() -> Void)?
+    
+    func tryCallingPickerStateChange() {
+        if let onPickerStateChange {
+            onPickerStateChange(.custom)
+        }
+    }
     
     func sendCustomAttachmentMessage() {
         guard let selectedChannelId = selectedChannel?.id else {
@@ -41,6 +50,12 @@ class AttachmentsViewModel: ChatChannelListViewModel {
             attachments: [AnyAttachmentPayload(payload: payloadAttachment)],
             extraData: extraData
         )
+        
+        withAnimation {
+            if let closeAttachments {
+                closeAttachments()
+            }
+        }
     }
     
     func updatePaymentPaid(messageId: MessageId, amount: Int) {

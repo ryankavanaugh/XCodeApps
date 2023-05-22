@@ -11,7 +11,7 @@ import StreamChatSwiftUI
 
 struct LeadingComposerView: View {
     
-//    @EnvironmentObject() var viewModel: MyChannelListViewModel
+    @ObservedObject var viewModel: AttachmentsViewModel
     
     @Injected(\.images) var images
     @Injected(\.colors) var colors
@@ -24,38 +24,36 @@ struct LeadingComposerView: View {
         HStack(spacing: 16) {
             switch pickerTypeState {
             case let .expanded(attachmentPickerType):
-                if channelConfig?.uploadsEnabled == true {
-                    PickerTypeButton(
-                        pickerTypeState: $pickerTypeState,
-                        pickerType: .media,
-                        selected: attachmentPickerType
-                    )
-                    .accessibilityIdentifier("PickerTypeButtonMedia")
+                Button {
+                    viewModel.sendCustomAttachmentMessage()
+                } label: {
+                    Image(systemName: "camera.aperture")
+                        .renderingMode(.template)
+                        .aspectRatio(contentMode: .fill)
+                        .frame(height: 18)
+                        .foregroundColor(Color(colors.textLowEmphasis))
                 }
+                .accessibilityIdentifier("PickerTypeInstaAttachment")
                 
-                PickerTypeButton(
-                    pickerTypeState: $pickerTypeState,
-                    pickerType: .instantCommands,
-                    selected: attachmentPickerType
-                )
-                .accessibilityIdentifier("PickerTypeButtonCommands")
-                
-//                Button {
-//                    viewModel.sendCustomAttachmentMessage()
-//                } label: {
-//                    Image(systemName: "camera.aperture")
-//                        .renderingMode(.template)
-//                        .aspectRatio(contentMode: .fill)
-//                        .frame(height: 18)
-//                        .foregroundColor(Color(colors.textLowEmphasis))
-//                }
-//                .accessibilityIdentifier("PickerTypeInstaAttachment")
-                
-                PickerTypeButton(
-                    pickerTypeState: $pickerTypeState,
-                    pickerType: .custom,
-                    selected: attachmentPickerType
-                )
+                Button {
+                    withAnimation {
+                        viewModel.selectedCustomAttachment = .payment
+                        viewModel.tryCallingPickerStateChange()
+                        if attachmentPickerType == .custom {
+                            pickerTypeState = .expanded(.none)
+                        } else {
+                            pickerTypeState = .expanded(.custom)
+                        }
+                    }
+                } label: {
+                    Image(systemName: "dollarsign.arrow.circlepath")
+                        .renderingMode(.template)
+                        .aspectRatio(contentMode: .fill)
+                        .frame(height: 18)
+                        .foregroundColor(
+                            foregroundColor(for: .custom, selected: attachmentPickerType)
+                        )
+                }
             case .collapsed:
                 Button {
                     withAnimation {
@@ -70,6 +68,17 @@ struct LeadingComposerView: View {
             }
         }
         .padding(.bottom, 8)
+    }
+    
+    private func foregroundColor(
+        for pickerType: AttachmentPickerType,
+        selected: AttachmentPickerType
+    ) -> Color {
+        if pickerType == selected {
+            return Color(colors.highlightedAccentBackground)
+        } else {
+            return Color(colors.textLowEmphasis)
+        }
     }
 }
 
@@ -133,6 +142,6 @@ struct PickerTypeButton: View {
 
 struct LeadingComposerView_Previews: PreviewProvider {
     static var previews: some View {
-        LeadingComposerView(pickerTypeState: .constant(.collapsed))
+        LeadingComposerView(viewModel: AttachmentsViewModel(), pickerTypeState: .constant(.collapsed))
     }
 }

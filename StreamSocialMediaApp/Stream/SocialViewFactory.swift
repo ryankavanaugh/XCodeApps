@@ -43,7 +43,10 @@ class SocialViewFactory: ViewFactory {
     }
     
     func makeLeadingComposerView(state: Binding<PickerTypeState>, channelConfig: ChannelConfig?) -> some View {
-        LeadingComposerView(pickerTypeState: state, channelConfig: channelConfig)
+        attachmentsViewModel.closeAttachments = {
+            state.wrappedValue = .expanded(.none)
+        }
+        return LeadingComposerView(viewModel: attachmentsViewModel, pickerTypeState: state, channelConfig: channelConfig)
     }
     
     func makeCustomAttachmentView(
@@ -55,11 +58,13 @@ class SocialViewFactory: ViewFactory {
     }
     
     func makeAttachmentSourcePickerView(selected: AttachmentPickerState, onPickerStateChange: @escaping (AttachmentPickerState) -> Void) -> some View {
-        MyAttachmentSourcePickerView(
-            selected: selected,
-            selectedCustomAttachment: $attachmentsViewModel.selectedCustomAttachment,
-            onTap: onPickerStateChange
-        )
+//        MyAttachmentSourcePickerView(
+//            selected: selected,
+//            selectedCustomAttachment: $attachmentsViewModel.selectedCustomAttachment,
+//            onTap: onPickerStateChange
+//        )
+        attachmentsViewModel.onPickerStateChange = onPickerStateChange
+        return EmptyView()
     }
     
     func makeCustomAttachmentPreviewView(

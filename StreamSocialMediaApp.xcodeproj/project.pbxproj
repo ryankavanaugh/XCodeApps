@@ -160,8 +160,6 @@
 				ACFA023928DB56FF00E363DE /* Data */,
 				5FB0056728B6696F00881252 /* DemoAppFiles */,
 				5F03D4A228920BE4007F8C9D /* AppDelegate.swift */,
-				5F03D4A4289211D3007F8C9D /* SocialViewFactory.swift */,
-				AC4C092D28DA1FF60061E959 /* LeadingComposerView.swift */,
 				5F03D4702891DD7B007F8C9D /* StreamSocialMediaAppApp.swift */,
 				5F03D49C28920045007F8C9D /* Views */,
 				5F03D49A28920016007F8C9D /* Components */,
@@ -253,6 +251,7 @@
 		ACDFC5502A17C8C700FF21E8 /* Stream */ = {
 			isa = PBXGroup;
 			children = (
+				5F03D4A4289211D3007F8C9D /* SocialViewFactory.swift */,
 				ACDFC55B2A17CB8C00FF21E8 /* View */,
 				ACDFC5582A17CB1000FF21E8 /* ViewModel */,
 				ACFA023728DB537200E363DE /* CustomMessageResolver.swift */,
@@ -284,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				ACDFC55C2A17CB9700FF21E8 /* CustomAttachmentView.swift */,
+				AC4C092D28DA1FF60061E959 /* LeadingComposerView.swift */,
 				AC3EE4052A1B9195008B6CA0 /* PaymentAttachmentPreview.swift */,
 				AC3EE4072A1B9748008B6CA0 /* PaymentAttachmentView.swift */,
 				ACDFC55F2A17CBFB00FF21E8 /* PaymentAttachmentPickerView.swift */,
