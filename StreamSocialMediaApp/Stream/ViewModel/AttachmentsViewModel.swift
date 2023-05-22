@@ -14,6 +14,7 @@ class AttachmentsViewModel: ChatChannelListViewModel {
     @Injected(\.chatClient) var chatClient
     
     @Published var selectedCustomAttachment: SelectedCustomAttachment = .none
+    @Published var confettiTrigger = 0
     
     var onPickerStateChange: ((AttachmentPickerState) -> Void)?
     var closeAttachments: (() -> Void)?

@@ -8,6 +8,7 @@
 import SwiftUI
 import StreamChat
 import StreamChatSwiftUI
+import ConfettiSwiftUI
 
 struct PaymentAttachmentView: View {
     
@@ -118,6 +119,12 @@ struct PaymentAttachmentView: View {
         )
         .padding()
         .shadow(radius: 4)
+        .confettiCannon(counter: $viewModel.confettiTrigger)
+        .onAppear {
+            if let _ = paymentDate {
+                viewModel.confettiTrigger += 1
+            }
+        }
     }
 }
 

@@ -32,6 +32,7 @@
 		AC3EE4062A1B9195008B6CA0 /* PaymentAttachmentPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3EE4052A1B9195008B6CA0 /* PaymentAttachmentPreview.swift */; };
 		AC3EE4082A1B9748008B6CA0 /* PaymentAttachmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3EE4072A1B9748008B6CA0 /* PaymentAttachmentView.swift */; };
 		AC3EE40A2A1BAD97008B6CA0 /* LinearGradient+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3EE4092A1BAD97008B6CA0 /* LinearGradient+Constants.swift */; };
+		AC3EE40D2A1C0889008B6CA0 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AC3EE40C2A1C0889008B6CA0 /* ConfettiSwiftUI */; };
 		AC4C092828DA198B0061E959 /* InstaAttachmentPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C092728DA198B0061E959 /* InstaAttachmentPayload.swift */; };
 		AC4C092A28DA1A140061E959 /* CreateInstaAttachmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C092928DA1A140061E959 /* CreateInstaAttachmentView.swift */; };
 		AC4C092C28DA1BDF0061E959 /* MyAttachmentSourcePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C092B28DA1BDF0061E959 /* MyAttachmentSourcePickerView.swift */; };
@@ -112,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC3EE40D2A1C0889008B6CA0 /* ConfettiSwiftUI in Frameworks */,
 				5F03D4A128920B85007F8C9D /* StreamChatSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +319,7 @@
 			name = StreamSocialMediaApp;
 			packageProductDependencies = (
 				5F03D4A028920B85007F8C9D /* StreamChatSwiftUI */,
+				AC3EE40C2A1C0889008B6CA0 /* ConfettiSwiftUI */,
 			);
 			productName = StreamSocialMediaApp;
 			productReference = 5F03D46D2891DD7B007F8C9D /* StreamSocialMediaApp.app */;
@@ -392,6 +395,7 @@
 			mainGroup = 5F03D4642891DD7B007F8C9D;
 			packageReferences = (
 				5F03D49F28920B85007F8C9D /* XCRemoteSwiftPackageReference "stream-chat-swiftui" */,
+				AC3EE40B2A1C0889008B6CA0 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 			);
 			productRefGroup = 5F03D46E2891DD7B007F8C9D /* Products */;
 			projectDirPath = "";
@@ -797,6 +801,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		AC3EE40B2A1C0889008B6CA0 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -804,6 +816,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5F03D49F28920B85007F8C9D /* XCRemoteSwiftPackageReference "stream-chat-swiftui" */;
 			productName = StreamChatSwiftUI;
+		};
+		AC3EE40C2A1C0889008B6CA0 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC3EE40B2A1C0889008B6CA0 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
