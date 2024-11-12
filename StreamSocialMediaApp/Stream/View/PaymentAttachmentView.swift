@@ -25,7 +25,7 @@ struct PaymentAttachmentView: View {
     var title: String {
         switch paymentState {
         case .requested:
-            return "Payment requested:"
+            return "Payment:"
         case .processing:
             return "Processing payment"
         case .done:

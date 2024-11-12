@@ -105,7 +105,7 @@ struct PostView: View {
                         .foregroundColor(Color.gray.opacity(0.99))
                         .padding(.horizontal, 9)
                         .padding(.vertical, 5)
-                        .background(Color.gray.opacity(0.07))
+                        .background(Color.green.opacity(0.1))
                         .clipShape(Capsule())
                 }
                 

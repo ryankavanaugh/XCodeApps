@@ -15,7 +15,7 @@ class SocialViewFactory: ViewFactory {
     @Injected(\.chatClient) var chatClient: ChatClient
     
     func makeChannelListHeaderViewModifier(title: String) -> SocialChannelModifier {
-        SocialChannelModifier(title: "InstaStream Messages", currentUserController: chatClient.currentUserController(), viewFactory: self)
+        SocialChannelModifier(title: "Nextdoor Messages", currentUserController: chatClient.currentUserController(), viewFactory: self)
     }
     
     func makeCustomAttachmentViewType(

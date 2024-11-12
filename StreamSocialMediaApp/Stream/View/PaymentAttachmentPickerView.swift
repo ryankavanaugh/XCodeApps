@@ -73,7 +73,7 @@ struct PaymentAttachmentPickerView: View {
 //                        )
 //                    )
                 } label: {
-                    Text("Request")
+                    Text("Payment")
                 }
                 .buttonStyle(.borderedProminent)
                 .disabled(selectedAmount == nil)

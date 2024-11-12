@@ -58,11 +58,11 @@ struct ContentView: View {
                 }
             }
             .listStyle(.plain)
-            .navigationBarTitle(Text("InstaStream"), displayMode: .inline)
+            .navigationBarTitle(Text("Nextdoor: Los Angeles"), displayMode: .inline)
             .navigationBarItems(leading: Button(action: {
                 print("click camera...")
             }, label: {
-                Image(systemName: "camera")
+                Image(systemName: "house")
                     .renderingMode(.original)
                     .resizable()
                     .scaledToFit()
